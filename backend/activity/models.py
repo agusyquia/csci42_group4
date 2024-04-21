@@ -7,6 +7,9 @@ class Activity(models.Model):
     frequency = models.CharField(max_length=50)
     start_date = models.DateField()
 
+    class Meta:
+        verbose_name_plural = "activities"
+
     def __str__(self):
         return self.activity_name
 

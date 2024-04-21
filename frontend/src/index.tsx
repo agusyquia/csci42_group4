@@ -1,9 +1,30 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+// import React from 'react';
+// import { createRoot } from 'react-dom/client';
+//
+// import App from './pages/App';
+//
+// const container = document.getElementById('root')!;
+// const root = createRoot(container);
+//
+// root.render(<App />);
 
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './pages/App'
+import './styles/index.css'
+import {createTheme, MantineProvider} from "@mantine/core";
+import {BrowserRouter} from "react-router-dom";
 
-const container = document.getElementById('root')!;
-const root = createRoot(container);
+const theme = createTheme({
 
-root.render(<App />);
+});
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+        <MantineProvider theme={theme} defaultColorScheme='dark'>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </MantineProvider>
+    </React.StrictMode>,
+)
