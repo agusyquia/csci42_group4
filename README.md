@@ -4,7 +4,11 @@ The project requires the latest LTS version of node: https://nodejs.org/en/downl
 
 When running for the application for the first time, input the following commands:
 
+*cd frontend*
+
 *npm install*
+
+*npm install axios*
 
 *npm run dev*
 
